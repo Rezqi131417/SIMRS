@@ -1,0 +1,390 @@
+/* =========================================================
+   STYLE.CSS - Modern & Clean System Theme
+   Cocok untuk halaman Navigasi, Form Pendaftaran, dan Tabel Data
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --primary-light: #dbeafe;
+    --bg-color: #f3f7fb;
+    --bg-soft: #eaf2ff;
+    --card-bg: #ffffff;
+    --text-color: #1f2937;
+    --text-muted: #64748b;
+    --border-color: #dfeaf5;
+    --shadow-sm: 0 8px 24px rgba(15, 23, 42, 0.06);
+    --shadow-md: 0 16px 38px rgba(37, 99, 235, 0.12);
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --transition: all 0.25s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, #edf5ff 0%, var(--bg-color) 30%, #f8fbff 100%);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 28px 20px;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* =========================================================
+   Typography & Headings
+   ========================================================= */
+h1, h2, h3 {
+    color: var(--text-color);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+}
+
+h1 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    margin-bottom: 12px;
+}
+
+h2 {
+    font-size: 1.7rem;
+    margin-top: 8px;
+}
+
+p {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+/* =========================================================
+   Navigation Bar (Menu)
+   ========================================================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 14px 20px;
+    backdrop-filter: blur(8px);
+    margin-bottom: 32px;
+}
+
+.brand {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-muted);
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+    background: var(--primary-light);
+    text-decoration: none;
+}
+
+.nav-links a.active {
+    color: #fff;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+    box-shadow: var(--shadow-sm);
+}
+
+/* =========================================================
+   Hero / Landing Page
+   ========================================================= */
+.hero {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: 42px 32px;
+}
+
+.eyebrow {
+    display: inline-block;
+    background: var(--bg-soft);
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 7px 12px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    max-width: 680px;
+    font-size: 1.02rem;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+/* =========================================================
+   Formulir (Form Pendaftaran)
+   ========================================================= */
+form {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    max-width: 560px;
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 6px;
+}
+
+.radio-option {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-color);
+    margin: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    background-color: #fafcff;
+    color: var(--text-color);
+    transition: var(--transition);
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    background-color: #ffffff;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+/* Tombol Submit / Button */
+input[type="submit"],
+button,
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+    color: #ffffff;
+    border: none;
+    padding: 12px 22px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+    text-decoration: none;
+}
+
+input[type="submit"]:hover,
+button:hover,
+.btn:hover {
+    background: linear-gradient(135deg, var(--primary-hover), var(--primary-color));
+    transform: translateY(-1px);
+    box-shadow: 0 12px 22px rgba(37, 99, 235, 0.28);
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background: #64748b;
+    box-shadow: 0 10px 20px rgba(100, 116, 139, 0.2);
+}
+
+.btn-secondary:hover {
+    background: #475569;
+}
+
+input[type="submit"]:active,
+button:active,
+.btn:active {
+    transform: translateY(0);
+}
+
+/* =========================================================
+   Tabel Data (Data Pendaftaran)
+   ========================================================= */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--card-bg);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    margin-top: 20px;
+}
+
+th {
+    background-color: #f1f5f9;
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1.5px solid var(--border-color);
+}
+
+td {
+    padding: 14px 18px;
+    font-size: 0.92rem;
+    color: #334155;
+    border-bottom: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background-color: #f8fbff;
+}
+
+th:first-child,
+td:first-child {
+    text-align: center;
+    width: 70px;
+}
+
+/* =========================================================
+   Komponen Tambahan (Link Balik / Info)
+   ========================================================= */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================================
+   Responsif (Tampilan HP / Mobile)
+   ========================================================= */
+@media (max-width: 700px) {
+    body {
+        padding: 18px 12px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .nav-links {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 28px 20px;
+    }
+
+    form {
+        padding: 20px 16px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
